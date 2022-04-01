@@ -1,20 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title> Ionic Google Maps </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div>
+    <ion-button>Open Window</ion-button>
+  </div>
+  <!-- <ng-template #showMobile>
+    <div id="map" #map></div>
+  </ng-template> -->
+  <div id="mapBox" class="match-parent"></div>
+  <div id="map" *ngIf="platform.is('android')">
+    <div id="map" #map></div>
   </div>
 </ion-content>
